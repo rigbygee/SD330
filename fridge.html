@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refrigerator Display</title>
+<style>
+
+  #frame {
+    width: 400px;
+    height: 600px; 
+    border: 5px solid black;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+
+  .content {
+    width: 50%; 
+    height: 50%;
+    position: absolute;
+  }
+
+  #clock {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #030303;
+    z-index: 10;
+  }
+
+  .content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  #temperature { top: 0; left: 0; }
+  #insideFridge { top: 0; right: 0; }
+  #tv { bottom: 0; left: 0; }
+  #browser { bottom: 0; right: 0; }
+
+  #mainPowerButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="frame">
+  <button id="mainPowerButton" onclick="toggleDisplay()">Power Button</button>
+
+  <div id="clock"></div>
+  
+
+  <div id="temperature" class="content">
+    <img src="https://image.coolblue.nl/624x351/content/a3ab20bf1b1cb0c2bb844fe590cdd992" alt="Temperature Display">
+  </div>
+
+  <div id="insideFridge" class="content">
+    <img src="https://i0.wp.com/vibrantandpure.com/wp-content/uploads/2017/06/fullsizerender-287.jpg?fit=750%2C928&quality=80&strip=all&ssl=1" alt="Inside of Fridge Display">
+  </div>
+
+  <div id="tv" class="content">
+    <img src="https://www.lifewire.com/thmb/XT_va3LXufvrRYq88m8qvjjarAk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Samsung-UN32N5300AFXZA-1080p-LED-LCD-Smart-TV-5b421594c9e77c0054c1f861.jpg" alt="TV Display">
+  </div>
+
+  <div id="browser" class="content">
+    <img src="https://media.istockphoto.com/id/1185812618/vector/modern-browser-window-design-isolated-web-window-screen-mockup-internet-empty-page-concept.jpg?s=612x612&w=0&k=20&c=Wb0TeiAJ9GmhXvNK-QdVu5XZPFoAaQm_zIB-o2kQAao=" alt="Browser Display">
+  </div>
+</div>
+
+<script>
+ function toggleDisplay() {
+    var contents = document.querySelectorAll('.content');
+    var mainPowerButton = document.getElementById('mainPowerButton');
+    var clock = document.getElementById('clock');
+
+    if (!displayOn) {
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'block';
+      }
+      mainPowerButton.innerText = 'Off';
+      updateTime(clock);
+      displayOn = true;
+    } else {
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+      }
+      clock.innerText = '';
+      mainPowerButton.innerText = 'Power';
+      displayOn = false;
+    }
+  }
+
+  function updateTime(clock) {
+    setInterval(function() {
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      clock.innerText = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+    }, 1000);
+  }
+  var clock = document.getElementById('clock');
+  updateTime(clock);
+</script>
+</body>
+</html>
