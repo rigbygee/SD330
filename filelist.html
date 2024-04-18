@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github File List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://farm3.staticflickr.com/2936/14765026726_b8a02d3989.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #avatar {
+            width: 300px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+        }
+
+        #files p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img id="avatar" src="https://www.farmersalmanac.com/wp-content/uploads/2021/03/japanese-cherry-tree-sakura-as259613221-950x632.jpeg" alt="Avatar">
+        <h1>Github File List</h1>
+        <p>Welcome to my Github repository! Below is the list of files available in my system design repository.</p>
+    </header>
+
+    <div id="files">
+    </div>
+
+    <footer>
+        <p>Created by Rigby Gee</p>
+        <p>Date: April 18, 2024</p>
+    </footer>
+
+    <script>
+        function githubFilelist() {
+            var htmlString = "";
+
+            (async () => {
+                const response = await fetch("https://api.github.com/repos/rigbygee/SD330/contents/");
+                const data = await response.json();
+
+                for (let file of data) {
+                    let fname = file.name;
+                    let fpath = "https://rigbygee.github.io/SD330/" + fname;
+
+                    htmlString += `<p><a href="${fpath}" target="_blank">${fname}</a></p>`;
+                }
+
+                document.getElementById('files').innerHTML = htmlString;
+            })()
+        }
+
+        githubFilelist();
+    </script>
+
+</body>
+
+</html>
