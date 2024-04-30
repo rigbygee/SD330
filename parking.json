@@ -1,0 +1,116 @@
+{
+    "parking_lots": [
+      {
+        "name": "Lot A",
+        "map": "mapA.jpg",
+        "total_spaces": 30,
+        "comments": "Closest to main entrance",
+        "spaces": [
+          {
+            "id": 1,
+            "type": "Faculty/Staff",
+            "status": "Available"
+          },
+          {
+            "id": 2,
+            "type": "Student",
+            "status": "Reserved",
+            "reserved_datetime": "2024-04-29T09:00:00",
+            "reserved_for": "John Doe"
+          },
+          {
+            "id": 3,
+            "type": "Handicap",
+            "status": "Filled",
+            "filled_datetime": "2024-04-28T13:30:00",
+            "filled_by": "Jane Smith"
+          },
+          {
+            "id": 4,
+            "type": "Faculty/Staff",
+            "status": "Available"
+          },
+          {
+            "id": 5,
+            "type": "Student",
+            "status": "Available"
+          },
+          {
+            "id": 6,
+            "type": "Faculty/Staff",
+            "status": "Reserved",
+            "reserved_datetime": "2024-04-29T10:30:00",
+            "reserved_for": "Alice Johnson"
+          },
+          {
+            "id": 7,
+            "type": "Student",
+            "status": "Filled",
+            "filled_datetime": "2024-04-29T08:45:00",
+            "filled_by": "Bob White"
+          },
+          {
+            "id": 8,
+            "type": "Handicap",
+            "status": "Available"
+          },
+          {
+            "id": 9,
+            "type": "Faculty/Staff",
+            "status": "Available"
+          },
+          {
+            "id": 10,
+            "type": "Student",
+            "status": "Available"
+          },
+          {
+            "id": 11,
+            "type": "Faculty/Staff",
+            "status": "Available"
+          },
+          {
+            "id": 12,
+            "type": "Student",
+            "status": "Available"
+          }
+        ]
+      },
+      {
+        "name": "Lot B",
+        "map": "mapB.jpg",
+        "total_spaces": 20,
+        "comments": "Underground parking",
+        "spaces": []
+      },
+      {
+        "name": "Lot C",
+        "map": "mapC.jpg",
+        "total_spaces": 40,
+        "comments": "Overflow parking",
+        "spaces": []
+      },
+      {
+        "name": "Lot D",
+        "map": "mapD.jpg",
+        "total_spaces": 25,
+        "comments": "Parking for visitors",
+        "spaces": []
+      },
+      {
+        "name": "Lot E",
+        "map": "mapE.jpg",
+        "total_spaces": 35,
+        "comments": "Parking for electric vehicles",
+        "spaces": []
+      },
+      {
+        "name": "Lot F",
+        "map": "mapF.jpg",
+        "total_spaces": 15,
+        "comments": "Reserved for special events",
+        "spaces": []
+      }
+    ]
+  }
+  
