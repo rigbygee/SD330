@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marist College Parking App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .lot {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            border: 2px solid #ffc107; /* Yellow border */
+            background-color: rgba(255, 193, 7, 0.2); /* Transparent yellow background */
+            padding: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .lot h2 {
+            margin-top: 0;
+        }
+        .lot p {
+            margin-top: 5px;
+        }
+        .lot img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .lot a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        .lot a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marist College Parking App</h1>
+    </header>
+    <section>
+        <div class="lot">
+            <h2><a href="#donnely">Donnely Lot</a></h2>
+            <p>Total Spots: 150</p>
+            <p>Available Spots: 100</p>
+            <p>Location: Near the Donnely Hall</p>
+            <img src="https://static1.squarespace.com/static/594f72de20099e6f69c443e7/5a7652a3f9619a31bd23a200/5c6f68351905f45f661fddc8/1550805393392/DN1.jpg?format=1500w" alt="Donnely Lot Image">
+        </div>
+        <div class="lot">
+            <h2><a href="#upper-west">Upper West Lot</a></h2>
+            <p>Total Spots: 200</p>
+            <p>Available Spots: 50</p>
+            <p>Location: West of Upper Fulton</p>
+            <img src="https://live.staticflickr.com/5511/30588944251_5345512811_b.jpg" alt="Upper West Lot Image">
+        </div>
+        <div class="lot">
+            <h2><a href="#midrise">Midrise Lot</a></h2>
+            <p>Total Spots: 100</p>
+            <p>Available Spots: 20</p>
+            <p>Location: Adjacent to Midrise Hall</p>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/04/5b/e1/mid-rise-dorms-overlooking.jpg" alt="Midrise Lot Image">
+        </div>
+        <div class="lot">
+            <h2><a href="#mccann">McCann Lot</a></h2>
+            <p>Total Spots: 120</p>
+            <p>Available Spots: 80</p>
+            <p>Location: Near the McCann Center</p>
+            <img src="https://goredfoxes.com/common/controls/image_handler.aspx?thumb_id=15&image_path=/images/2019/9/26/193.jpg" alt="McCann Lot Image">
+        </div>
+        <div class="lot">
+            <h2><a href="#fulton">Fulton Lot</a></h2>
+            <p>Total Spots: 180</p>
+            <p>Available Spots: 30</p>
+            <p>Location: East of Upper Fulton</p>
+            <img src="https://www.poughkeepsiejournal.com/gcdn/presto/2021/03/04/PPOU/23d1a211-f9dc-4eb2-b5e3-12caed55b355-Fulton_3.jpg?width=1200&disable=upscale&format=pjpg&auto=webp" alt="Fulton Lot Image">
+        </div>
+        <div class="lot">
+            <h2><a href="#north-end">North End Lot</a></h2>
+            <p>Total Spots: 300</p>
+            <p>Available Spots: 200</p>
+            <p>Location: North End of Campus</p>
+            <img src="https://static1.squarespace.com/static/594f72de20099e6f69c443e7/594f75df1b10e30c099de149/632c9adb6e8ace141f9cbeda/1663882809441/Fontaine+Parking+Sign+%281%29.JPG?format=1500w" alt="North End Lot Image">
+        </div>
+    </section>
+</body>
+</html>
